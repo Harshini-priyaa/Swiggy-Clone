@@ -1,12 +1,18 @@
-// src/pages/ProductPage.js
-import React, { useState } from 'react';
-import ProductList from '../components/ProductList';
+
+import React from 'react';
+import './ProductPage.css';
 
 const ProductPage = ({ products, addToCart }) => {
   return (
-    <div className="product-page">
-      <h1>Products</h1>
-      <ProductList products={products} addToCart={addToCart} />
+    <div className="products">
+      {products.map(product => (
+        <div key={product.id} className="product-card">
+          <img src={product.imageUrl} alt={product.name} />
+          <h3>{product.name}</h3>
+          <p>₹{product.price}</p>
+          <button onClick={() => addToCart(product)}>Add to Cart</button>
+        </div>
+      ))}
     </div>
   );
 };

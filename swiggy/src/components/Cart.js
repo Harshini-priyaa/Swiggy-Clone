@@ -1,4 +1,4 @@
-// src/components/Cart.js
+
 import React from 'react';
 
 const Cart = ({ cartItems, removeFromCart }) => {

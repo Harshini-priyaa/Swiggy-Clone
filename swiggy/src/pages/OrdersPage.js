@@ -1,4 +1,4 @@
-// src/pages/OrdersPage.js
+
 import React from 'react';
 
 const OrdersPage = () => {

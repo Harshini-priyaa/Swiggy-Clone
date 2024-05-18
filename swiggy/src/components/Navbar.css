@@ -1,36 +1,64 @@
-/* src/components/Navbar.css */
+
 .navbar {
-    display: flex;
-    justify-content: space-around;
-    background: #efefef;
-    padding: 1em;
-  }
-  
-  .navbar a, .navbar button {
-    text-decoration: none;
-    color: black;
-    padding: 0.5em 1em;
-    border: none;
-    background: none;
-    cursor: pointer;
-  }
-  
-  .modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: white;
-    padding: 2em;
-    border: 1px solid #ccc;
-  }
-  
-  .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.75);
-  }
-  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 1em;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo span {
+  font-size: 2em;
+  font-weight: bold;
+  color: #fc8019;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+
+}
+
+.navbar a, .navbar button {
+  text-decoration: none;
+  color: #333;
+  padding: 0.5em 1em;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.navbar button {
+  color: #fff;
+  background-color: #fc8019;
+  border-radius: 4px;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 2em;
+  border: 1px solid #ccc;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.75);
+}

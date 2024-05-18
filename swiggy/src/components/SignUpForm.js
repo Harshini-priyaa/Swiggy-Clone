@@ -1,5 +1,6 @@
-// src/components/SignUpForm.js
+
 import React, { useState } from 'react';
+import './AuthForms.css';
 
 const SignUpForm = ({ closeModal, openModal }) => {
   const [name, setName] = useState('');
@@ -13,34 +14,57 @@ const SignUpForm = ({ closeModal, openModal }) => {
       alert('Passwords do not match');
       return;
     }
-    // Implement sign-up logic here
+ 
     closeModal();
   };
 
   return (
-    <div>
+    <div className="auth-form-container">
       <h2>Sign Up</h2>
       <form onSubmit={handleSubmit}>
         <label>
           Name:
-          <input type="text" value={name} onChange={(e) => setName(e.target.value)} required />
+          <input
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            required
+          />
         </label>
         <label>
           Email:
-          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
         </label>
         <label>
           Password:
-          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
         </label>
         <label>
           Confirm Password:
-          <input type="password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} required />
+          <input
+            type="password"
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+            required
+          />
         </label>
         <button type="submit">Register</button>
       </form>
       <p>
-        Already have an account? <a href="#" onClick={() => openModal(false)}>Sign In</a>
+        Already have an account?{' '}
+        <a href="#" onClick={() => openModal(false)}>
+          Sign In
+        </a>
       </p>
     </div>
   );

@@ -1,4 +1,4 @@
-// src/components/Navbar.js
+
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Modal from 'react-modal';
@@ -23,6 +23,10 @@ const Navbar = () => {
 
   return (
     <div className="navbar">
+      <div className="logo">
+        {/* <img src="https://via.placeholder.com/40x40" alt="Swiggy Logo" /> */}
+        <span>Swiggy</span>
+      </div>
       <Link to="/">Home</Link>
       <Link to="/foods">Foods</Link>
       <Link to="/orders">Orders</Link>
